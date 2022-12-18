@@ -1,15 +1,6 @@
-import {
-  Center,
-  Card,
-  CardHeader,
-  Heading,
-  CardBody,
-  Input,
-  Stack,
-  Button,
-  InputProps,
-} from '@chakra-ui/react'
+import { Input, Stack, Button, InputProps } from '@chakra-ui/react'
 import { numberInputProps } from '../../ChakraUIStyleObjects/NumberInput'
+import { Page } from '../../Layouts/Page'
 import { useGetNumberOfWords } from './useGetNumberOfWords'
 
 const inputProps: InputProps = {
@@ -22,25 +13,16 @@ const inputProps: InputProps = {
 const GetNumberOfWords = () => {
   const { numberOfWordsInput, saveNumberOfWords } = useGetNumberOfWords()
   return (
-    <Center marginTop='3em'>
-      <Card>
-        <CardHeader>
-          <Heading>
-            Selecciona la cantidad de palabras que desea recordar
-          </Heading>
-        </CardHeader>
-        <CardBody>
-          <form onSubmit={saveNumberOfWords}>
-            <Input ref={numberOfWordsInput} {...inputProps} />
-            <Stack margin='2em'>
-              <Button colorScheme='orange' type='submit'>
-                Guardar
-              </Button>
-            </Stack>
-          </form>
-        </CardBody>
-      </Card>
-    </Center>
+    <Page title='Selecciona la cantidad de palabras que desea recordar'>
+      <form onSubmit={saveNumberOfWords}>
+        <Input ref={numberOfWordsInput} {...inputProps} />
+        <Stack margin='2em'>
+          <Button colorScheme='orange' type='submit'>
+            Guardar
+          </Button>
+        </Stack>
+      </form>
+    </Page>
   )
 }
 
