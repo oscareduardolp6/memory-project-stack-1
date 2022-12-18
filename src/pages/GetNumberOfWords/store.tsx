@@ -1,6 +1,6 @@
 import { proxy } from 'valtio'
-import { PosibleError } from '../Types/Result'
-import { isPositiveInteger } from '../Utils/Number'
+import { PosibleError } from '../../Types/Result'
+import { isPositiveInteger } from '../../Utils/Number'
 
 type NumberOfWordsStore = { numberOfWords: number }
 

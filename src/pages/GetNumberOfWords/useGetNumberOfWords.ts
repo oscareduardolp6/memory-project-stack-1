@@ -1,6 +1,6 @@
 import { useRef } from "react"
-import { manageError } from "../Utils/NavigatorUtils"
-import { onSubmitClosure, getValueFromRef } from "../Utils/React"
+import { manageError } from "../../Utils/NavigatorUtils"
+import { onSubmitClosure, getValueFromRef } from "../../Utils/React"
 import { setNumberOfWords } from "./store"
 
 export const useGetNumberOfWords = () => {

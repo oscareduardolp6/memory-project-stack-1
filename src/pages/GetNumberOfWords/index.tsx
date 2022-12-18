@@ -9,7 +9,7 @@ import {
   Button,
   InputProps,
 } from '@chakra-ui/react'
-import { numberInputProps } from '../ChakraUIStyleObjects/NumberInput'
+import { numberInputProps } from '../../ChakraUIStyleObjects/NumberInput'
 import { useGetNumberOfWords } from './useGetNumberOfWords'
 
 const inputProps: InputProps = {
