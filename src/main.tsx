@@ -8,8 +8,8 @@ import './App.css'
 createRoot(document.getElementById('root') as HTMLElement).render(
   <StrictMode>
     <ChakraProvider>
-      <ColorModeProvider value='dark'>
-        <RouterProvider {...{router}} />
+      <ColorModeProvider>
+        <RouterProvider  {...{router}} />
       </ColorModeProvider>
     </ChakraProvider>
   </StrictMode>
