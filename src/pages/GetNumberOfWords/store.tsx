@@ -1,15 +1,25 @@
-import { proxy } from 'valtio'
-import { PosibleError } from '../../Types/Result'
+import { proxy, useSnapshot } from 'valtio'
 import { isPositiveInteger } from '../../Utils/Number'
 
-type NumberOfWordsStore = { numberOfWords: number }
+interface State { numberOfWords: number }
 
-export const getNumberOfWordsStore = proxy<NumberOfWordsStore>({ numberOfWords: 1 })
+class InitialState {
+  private num = 1
 
-export const setNumberOfWords = (numberOfWords: number): PosibleError => {
-  if (!isPositiveInteger(numberOfWords))
-    return new Error(`El número de palabras debe ser un entero positivo, 
-    ${numberOfWords} no cumple con ese requisito`)
-  getNumberOfWordsStore.numberOfWords = numberOfWords
-  return null
+  get numberOfWords() {
+    return this.num
+  }
+
+  set numberOfWords(value: number) {
+    if(!isPositiveInteger(value)) throw new Error(`El número de palabras debe ser un entero positivo`)
+    this.num = value
+  }
+}
+
+export const numberOfWords = proxy<State>(new InitialState())
+
+export const useNumberOfWordsStateSnap = () => useSnapshot(numberOfWords)
+
+declare module 'valtio' {
+  function useSnapshot<T extends object>(p: T): T
 }
