@@ -7,6 +7,10 @@ import { useRedirect } from '../../Hooks/useRedirect'
 import { reset } from './reset'
 import { wordToState } from './State/Utils'
 
+/**
+ * Contains the behaivor of the Words Results page 
+ * @returns 
+ */
 export const useWordsResults = () => {
   const { wordsData, answersButtonText } = useWordsResultSnap()
   const { rememberedWords } = useWordsRememberSnap()

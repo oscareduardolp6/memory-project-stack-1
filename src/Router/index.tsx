@@ -24,11 +24,10 @@ const wordsResults: MyRouteObject = {
   errorElement: <Error />,
 }
 
-const routes: RouteObject[] = [
+const routes = [
   inputNumberOfPaths,
   wordsRemember,
   wordsResults,
 ] as RouteObject[]
 
-// export const router = createBrowserRouter(routes as RouteObject[])
 export const router = createHashRouter(routes) 
