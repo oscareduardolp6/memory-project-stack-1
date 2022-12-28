@@ -12,7 +12,7 @@ type InputsProps = {
 export const Inputs = ({ wordsArray, onChangeClosure }: InputsProps) => (
   <>
     {wordsArray.map((wordState, index) => (
-      <MyInput {...{ index, wordState }} onChange={onChangeClosure(index)} />
+      <MyInput {...{ index, wordState }} key={wordState.correctWord} onChange={onChangeClosure(index)} />
     ))}
   </>
 )
