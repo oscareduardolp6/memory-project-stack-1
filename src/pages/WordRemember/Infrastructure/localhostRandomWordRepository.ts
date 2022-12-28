@@ -2,7 +2,7 @@ import { resolve } from "../../../Utils/Promise";
 import { GetRandomWord } from "../Domain/RandomWordRepository";
 
 export const getRandomWord: GetRandomWord = async (num = 0) => {
-  let url = 'http://localhost:8080/'
+  let url = 'https://random-spanish-words.onrender.com/'
   if(num > 1) url += `?num=${num}`
   const [response, error] = await resolve(fetch(url))
   if(error) return [[], error]
