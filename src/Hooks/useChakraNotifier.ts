@@ -3,7 +3,7 @@ import { AlertFunction, Notifier } from "../Domain/Notifier"
 import { seconds } from "../Utils/Seconds"
 
 const isClosable = true
-const duration = seconds(1)
+const duration = seconds(3)
 
 export const useChakraNotifier = () => {
   const toast = useToast()
