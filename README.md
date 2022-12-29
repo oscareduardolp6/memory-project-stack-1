@@ -1,7 +1,9 @@
 # Memory Project
-An application made to exercise your memory, gives you a certain number of words, then, shows you that quantity of words, after that you have to repeat all the words in the same order that you see it. 
+An application made to exercise your memory, gives you a certain number of words, then, shows you that quantity of words, after that you have to repeat all the words in the same order that you saw them. 
 
 > UI in spanish 
+
+[Demo](https://oscarlp6.dev/memory-project/)
 
 ![initial page](https://oscarlp6.dev/images/projects/memory-trainer-2.png)
 ![second page](https://oscarlp6.dev/images/projects/memory-trainer-3.png)
