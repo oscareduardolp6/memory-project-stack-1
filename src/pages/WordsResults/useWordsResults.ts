@@ -21,8 +21,8 @@ export const useWordsResults = () => {
   const updateWordClosure = (index: number) => ({ target: { value } }: ChangeEvent) =>
     state.updateActualWord(index, value)
   const resetApp = () => {
-    reset()
     goTo('/')
+    document.location.reload()
   }
 
   useEffect(() => {
